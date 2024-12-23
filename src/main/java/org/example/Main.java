@@ -40,10 +40,9 @@ public class Main extends JFrame {
         footerPanel.add(footerLabel);
         add(footerPanel, BorderLayout.SOUTH);
 
+        // Action Listeners
         btnBarang.addActionListener(e -> new ManajemenBarang().setVisible(true));
-        btnTransaksi.addActionListener(e -> new ManajemenBarangTransaksi().setVisible(true));   btnBarang.addActionListener(e -> new ManajemenBarang().setVisible(true));
         btnTransaksi.addActionListener(e -> new ManajemenBarangTransaksi().setVisible(true));
-
     }
 
 
@@ -61,7 +60,8 @@ public class Main extends JFrame {
     }
 
     public static void main(String[] args) {
-
+        DatabaseSetUp.initializeDatabase();
+        SwingUtilities.invokeLater(() -> new Login().setVisible(true));
 
     }
 
