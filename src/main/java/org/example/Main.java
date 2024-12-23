@@ -40,6 +40,10 @@ public class Main extends JFrame {
         footerPanel.add(footerLabel);
         add(footerPanel, BorderLayout.SOUTH);
 
+        btnBarang.addActionListener(e -> new ManajemenBarang().setVisible(true));
+        btnTransaksi.addActionListener(e -> new ManajemenBarangTransaksi().setVisible(true));   btnBarang.addActionListener(e -> new ManajemenBarang().setVisible(true));
+        btnTransaksi.addActionListener(e -> new ManajemenBarangTransaksi().setVisible(true));
+
     }
 
 
